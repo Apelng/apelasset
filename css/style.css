@@ -2893,12 +2893,12 @@ footer.mil-footer-dark-2 .mil-footer-bottom {
 
 /* Specific styles for the second banner with background image */
 .mil-banner2:nth-child(2) {
-  background-image: url('/img/header_img.jpg'); /* Set the background image */
+  background-image: url('../img/header_img.jpg'); /* Set the background image */
   color: white; /* Change text color for better contrast */
 }
 
 .mil-banner2:nth-child(1) {
-  background-image: url('/img/corporate-finance.jpg'); /* Set the background image */
+  background-image: url('../img/corporate-finance.jpg'); /* Set the background image */
   color: white; /* Change text color for better contrast */
 }
 
