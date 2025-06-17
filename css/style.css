@@ -3469,7 +3469,7 @@ iframe {
   }
 
   .mil-marquee-inner {
-      animation: scroll 25s linear infinite; /* Adjust scroll speed */
+      animation: scroll 50s linear infinite; /* Adjust scroll speed */
       gap: 15px; /* Reduce spacing */
   }
 }
@@ -3480,7 +3480,7 @@ iframe {
   }
 
   .mil-marquee-inner {
-      animation: scroll 10s linear infinite; /* Faster scroll speed */
+      animation: scroll 45s linear infinite; /* Faster scroll speed */
       gap: 10px;
   }
 }
