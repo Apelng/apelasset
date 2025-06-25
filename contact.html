@@ -399,44 +399,7 @@
 
 
     
-<script>
-    document.getElementById('contactForm').addEventListener('submit', async (e) => {
-        e.preventDefault();
-        
-        const form = e.target;
-        const formData = {
-            name: form.name.value,
-            email: form.email.value,
-            phone: form.phone.value,
-            message: form.message.value
-        };
-    
-        const alertDiv = document.querySelector('.alert-success');
-        
-        try {
-            const response = await fetch('http://localhost:3001/send-email', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData)
-            });
-    
-            if (response.ok) {
-                form.reset();
-                alertDiv.style.display = 'block';
-                setTimeout(() => {
-                    alertDiv.style.display = 'none';
-                }, 5000);
-            } else {
-                alert('Error sending message');
-            }
-        } catch (error) {
-            console.error('Error:', error);
-            alert('Error sending message');
-        }
-    });
-    </script>
+
     <script src="js/plugins/jquery.min.js"></script>
 
 
