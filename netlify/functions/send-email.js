@@ -59,7 +59,7 @@ const createEmailTemplate = (data) => `
     });
   }
 </script>
-</body>
+ </body>
 </html>
 `;
 
