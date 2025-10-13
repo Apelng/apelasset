@@ -209,6 +209,54 @@
     }
     </style>
 <body>
+<!-- Popup Container -->
+    <div id="popup-container" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 9999;">
+        <span id="popup-close" style="position: fixed; top: 20px; right: 20px; color: white; font-size: 30px; font-weight: bold; cursor: pointer; z-index: 10001; background: rgba(0,0,0,0.5); width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; line-height: 1; border: 2px solid white;">&times;</span>
+        <iframe id="popup-iframe" src="popup.html" style="width: 100%; height: 100%; border: none; background: transparent;"></iframe>
+    </div>
+
+    <script>
+        // Wait for everything to load
+        document.addEventListener('DOMContentLoaded', function() {
+            const popupContainer = document.getElementById('popup-container');
+            const popupIframe = document.getElementById('popup-iframe');
+            
+            // Show popup after a short delay
+            setTimeout(function() {
+                popupContainer.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+                
+                // Add a class to the iframe document to hide its close button
+                try {
+                    const iframeDoc = popupIframe.contentDocument || popupIframe.contentWindow.document;
+                    const style = iframeDoc.createElement('style');
+                    style.textContent = '.close { display: none !important; }';
+                    iframeDoc.head.appendChild(style);
+                } catch (e) {
+                    console.log('Could not access iframe content:', e);
+                }
+            }, 1000);
+            
+            // Close popup function
+            function closePopup() {
+                popupContainer.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+            
+            // Close when clicking the close button
+            document.getElementById('popup-close').addEventListener('click', closePopup);
+            
+            // Close when clicking outside the iframe
+            popupContainer.addEventListener('click', function(e) {
+                if (e.target === this) closePopup();
+            });
+            
+            // Close with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') closePopup();
+            });
+        });
+    </script>
 
 
     <!-- wrapper -->
