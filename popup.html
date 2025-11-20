@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .popup {
+            display: flex;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.8); /* Semi-transparent black overlay */
+            
+            
+        }
+        
+        .popup img {
+            width: 100%;
+            height: 80%;
+            object-fit: contain;
+            object-position: center;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Hide the close button as we're using the parent's close button */
+        .close {
+            display: none !important;
+        }
+        
+        @media (max-width: 768px) {
+            .popup img {
+                width: 100%;
+                height: 80%;
+                object-fit: contain;
+                object-position: center;
+
+            }
+
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="popup" class="popup">
+        <img src="https://res.cloudinary.com/apelng/image/upload/v1760364542/Potrait_Disclaim_wsn3hp.jpg" alt="Apel Financial Services">
+    </div>
+</body>
+</html>
