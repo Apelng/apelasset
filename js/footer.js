@@ -30,8 +30,8 @@
         <div class="footer-company-links">
           <a href="https://apel.com.ng">Home</a>
           <a href="https://asset.apel.com.ng">Apel Asset Limited</a>
-          <a href="https://trust.apel.com.ng">Apel Capital &amp; Trust Limited</a>
-          <a href="https://registrars.apel.com.ng/">Apel Capital Registrars Limited</a>
+          <a href="https://trust.apel.com.ng">Apel Trustees Limited</a>
+          <a href="https://registrars.apel.com.ng/">Apel Registrars and Corporate Services Limited</a>
           <a href="https://wealth.apel.com.ng">Apel Wealth Management Limited</a>
         </div>
       </div>
